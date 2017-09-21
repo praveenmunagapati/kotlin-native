@@ -163,7 +163,7 @@ targetList.each { target ->
     "-Dfile.encoding=UTF-8"]
 
     def defaultArgs = ['-nopack', '-nostdlib','-ea' ]
-    if (target != "wasm32") defaultArgs += '-g'
+//    if (target != "wasm32") defaultArgs += '-g'
     def konanArgs = [*defaultArgs,
                      '-target', target,
                      '-runtime', project(':runtime').file("build/${target}/runtime.bc"),
